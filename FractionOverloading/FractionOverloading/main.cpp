@@ -4,7 +4,7 @@
 int main()
 {
 	using namespace std;
-	Fraction f(7, 3), f2(f), f3;
+	Fraction f(9, 3), f2(f), f3;
 
 	// test
 	cout << "Numerator: " << f.getNumerator() << endl;
@@ -21,6 +21,7 @@ int main()
 	f *= f;
 	cout << "Fraction 1 : " << f.getFraction() << endl;
 	cout << "Fraction 1 as fraction : " << f << endl;
+	cout << "Enter a fraction and I will square it.\n";
 	cin >> f;
-	cout << f;
+	cout << f * f << endl;
 }

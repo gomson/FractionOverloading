@@ -51,19 +51,27 @@ Fraction &Fraction::equals(Fraction &frac)
 	return *this;
 }
 
-Fraction &Fraction::operator=(Fraction & frac)
+Fraction &Fraction::operator=(Fraction &frac)
 {
 	return this->equals(frac);
 }
 
-Fraction &Fraction::operator*=(Fraction & frac)
+Fraction &Fraction::operator*=(Fraction &frac)
 {
 	this->numerator *= frac.getNumerator();
 	this->denominator *= frac.getDenominator();
 	return *this;
 }
 
-std::ostream &operator<<(std::ostream & output, Fraction & frac)
+Fraction &Fraction::operator*(Fraction &frac)
+{
+	 this->set(this->numerator * frac.getNumerator(), this->denominator * frac.getDenominator());
+	 return *this;
+}
+
+
+
+std::ostream &operator<<(std::ostream & output, Fraction & frac) //overloads stream operator
 {
 	output << frac.getFraction();
 	return output;

@@ -19,6 +19,7 @@ public:
 	//mutator
 	void set(int numerator, int denominator);
 	void set(Fraction &frac);
+
 	//accessor
 	int getNumerator();
 	int getDenominator();
@@ -28,7 +29,11 @@ public:
 	Fraction &equals(Fraction &frac); // when overloading equals sign use pass by ref
 	Fraction &operator=(Fraction &frac);
 	Fraction &operator*=(Fraction &frac);
+	Fraction & operator*(Fraction & frac);
 
+
+	
+	
 	friend std::ostream &operator << (std::ostream &output, Fraction &frac);
 	friend istream &operator >> (istream &input, Fraction &frac);
 
